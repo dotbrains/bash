@@ -167,9 +167,3 @@ test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew
 # Make a global variable to access the dotfiles repository
 
 export DOTFILES="$HOME/set-me-up"
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Configure Neovim as default editor
-
-export EDITOR="nvim"
