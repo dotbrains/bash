@@ -17,8 +17,7 @@ In your `$HOME` directory you would want a `.bashrc` that contains:
 
 [ -n "$PS1" ] \
     && . ~/.bash_profile \
-	&& . ~/.bash.local # For local settings that should
-					   # not be under version control.
+    && . ~/.bash.local # For local settings that should not be under version control.
 ```
 
 ## License
