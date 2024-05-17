@@ -24,7 +24,7 @@ source_bash_files() {
 
     for i in ${!FILES_TO_SOURCE[*]}; do
 
-        file="$HOME/.config/bash/${FILES_TO_SOURCE[$i]}"
+        file="$HOME/.config/bash/bash/${FILES_TO_SOURCE[$i]}"
 
         [[ -r "$file" ]] &&
             . "$file"
