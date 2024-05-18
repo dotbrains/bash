@@ -82,13 +82,6 @@ export PYTHONIOENCODING="UTF-8"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Set custom 'ls' colors
-# see: https://github.com/nordtheme/dircolors
-
-test -r "$HOME"/.config/bash/bash/dir_colors && eval "$(dircolors "$HOME"/.config/bash/bash/dir_colors)"
-
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
 # Ruby configurations
 # Adds "GEMS_PATH" to "$PATH"
 # Fixes "I INSTALLED GEMS WITH --user-install AND THEIR COMMANDS ARE NOT AVAILABLE"
@@ -141,6 +134,11 @@ export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
 
 # Nord for Bat
 export BAT_THEME="Nord"
+
+# Set custom 'ls' colors
+# see: https://github.com/nordtheme/dircolors
+
+test -r "$HOME"/.config/bash/bash/dir_colors && eval "$(dircolors "$HOME"/.config/bash/bash/dir_colors)"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
