@@ -7,7 +7,7 @@ This repository contains my sensible defaults for bash.
 The contents of this repository should be placed in your `$HOME/.config`. 
 
 ```bash
-git clone https://github.com/nicholasadamou/bash.git $HOME/.config/bash
+git clone https://github.com/dotbrains/bash.git $HOME/.config/bash
 ```
 
 In your `$HOME` directory you would want a `.bashrc` that contains:
