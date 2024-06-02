@@ -138,7 +138,14 @@ export BAT_THEME="Nord"
 # Set custom 'ls' colors
 # see: https://github.com/nordtheme/dircolors
 
-test -r "$HOME"/.config/bash/bash/dir_colors && eval "$(dircolors "$HOME"/.config/bash/bash/dir_colors)"
+# Check if running on macOS or Linux
+if [[ "$OSTYPE" == "darwin"* ]]; then
+	DIRCOLORS_CMD="gdircolors"
+else
+	DIRCOLORS_CMD="dircolors"
+fi
+
+test -r "$HOME"/.config/bash/bash/dir_colors && eval "$($DIRCOLORS_CMD "$HOME"/.config/bash/bash/dir_colors)"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 

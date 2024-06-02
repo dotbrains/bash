@@ -27,12 +27,19 @@ export LS_COLORS
 
 # Enable color support.
 
-if [ -x /usr/bin/dircolors ]; then
+# Check if running on macOS or Linux
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    DIRCOLORS_CMD="gdircolors"
+else
+    DIRCOLORS_CMD="dircolors"
+fi
+
+if [ -x "$(command -v $DIRCOLORS_CMD)" ]; then
 
     if test -r ~/.config/bash/dircolors; then
-        eval "$(dircolors -b ~/.config/bash/dircolors)"
+        eval "$($DIRCOLORS_CMD -b ~/.config/bash/dircolors)"
     else
-        eval "$(dircolors -b)"
+        eval "$($DIRCOLORS_CMD -b)"
     fi
 
     alias dir="dir --color=auto"
