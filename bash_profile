@@ -13,7 +13,6 @@ source_bash_files() {
         "bash_functions"
         "bash_options"
         # "bash_prompt" Note: Using starship prompt instead (see: https://starship.rs).
-        "inputrc"
         "keybindings"
     )
 
