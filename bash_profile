@@ -59,8 +59,8 @@ fi
 # load 'bash-sensible' configs.
 # see: https://github.com/mrzool/bash-sensible
 
-if [[ -d "$HOME"/.config/bash-sensible ]]; then
-    . "$HOME"/.config/bash-sensible/sensible.bash
+if [[ -d "$HOME"/.config/bash/bash-sensible ]]; then
+    . "$HOME"/.config/bash/bash-sensible/sensible.bash
 fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
