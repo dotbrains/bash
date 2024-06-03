@@ -2567,4 +2567,4 @@ omr() {
 # Section: [emoji-log](https://github.com/ahmadawais/Emoji-Log) #
 #---------------------------------------------------------------#
 
-. "$HOME"/.config/bash/emoji-log
+. "$HOME"/.config/bash/bash/emoji-log
