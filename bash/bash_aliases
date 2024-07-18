@@ -26,11 +26,11 @@ alias z="zoxide"
 
 # 'ls' aliases
 
-command -v "exa" &>/dev/null && {
-    alias ls="exa"
+command -v "eza" &>/dev/null && {
+    alias ls="eza"
 
     # List all files colorized in long format
-    alias l="exa -l"
+    alias l="eza -l"
 }
 
 # List only directories
