@@ -36,7 +36,10 @@ fi
 
 if [ -x "$(command -v $DIRCOLORS_CMD)" ]; then
 
-    if test -r "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/dir_colors"; then
+    # Use theme-specific dir_colors if THEME_DIR_COLORS is set (from exports.bash)
+    if [ -n "$THEME_DIR_COLORS" ] && test -r "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/$THEME_DIR_COLORS"; then
+        eval "$($DIRCOLORS_CMD -b "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/$THEME_DIR_COLORS")"
+    elif test -r "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/dir_colors"; then
         eval "$($DIRCOLORS_CMD -b "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/dir_colors")"
     else
         eval "$($DIRCOLORS_CMD -b)"

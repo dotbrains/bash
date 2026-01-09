@@ -1,0 +1,249 @@
+# Gruvbox Dark Medium dircolors
+# Based on https://github.com/morhetz/gruvbox
+
+COLOR tty
+
+TERM alacritty
+TERM alacritty-direct
+TERM ansi
+TERM *color*
+TERM con[0-9]*x[0-9]*
+TERM cons25
+TERM console
+TERM cygwin
+TERM dtterm
+TERM dvtm
+TERM dvtm-256color
+TERM Eterm
+TERM eterm-color
+TERM fbterm
+TERM gnome
+TERM gnome-256color
+TERM hurd
+TERM jfbterm
+TERM konsole
+TERM konsole-256color
+TERM kterm
+TERM linux
+TERM linux-c
+TERM mlterm
+TERM putty
+TERM putty-256color
+TERM rxvt*
+TERM rxvt-unicode
+TERM rxvt-256color
+TERM rxvt-unicode256
+TERM screen*
+TERM screen-256color
+TERM st
+TERM st-256color
+TERM terminator
+TERM tmux*
+TERM tmux-256color
+TERM vt100
+TERM xterm*
+TERM xterm-color
+TERM xterm-88color
+TERM xterm-256color
+TERM xterm-kitty
+
+#+---------------+
+#+ Global Defaults +
+#+---------------+
+NORMAL 00
+RESET 0
+
+FILE 00
+DIR 01;38;5;109        # Aqua (directories)
+LINK 38;5;142          # Green (symbolic links)
+MULTIHARDLINK 04;38;5;142
+
+FIFO 04;01;38;5;108
+SOCK 04;38;5;214
+DOOR 04;01;38;5;108
+BLK 01;38;5;214
+CHR 38;5;214
+
+ORPHAN 38;5;167        # Red (broken links)
+MISSING 01;37;41
+
+EXEC 01;38;5;142       # Green (executables)
+
+SETUID 01;04;37
+SETGID 01;04;37
+CAPABILITY 01;37
+
+STICKY_OTHER_WRITABLE 01;37;44
+OTHER_WRITABLE 01;04;38;5;109
+STICKY 04;37;44
+
+#+-------------------+
+#+ Extension Pattern +
+#+-------------------+
+#+--- Archives ---+
+.7z 01;38;5;167
+.ace 01;38;5;167
+.alz 01;38;5;167
+.arc 01;38;5;167
+.arj 01;38;5;167
+.bz 01;38;5;167
+.bz2 01;38;5;167
+.cab 01;38;5;167
+.cpio 01;38;5;167
+.deb 01;38;5;167
+.dz 01;38;5;167
+.ear 01;38;5;167
+.gz 01;38;5;167
+.jar 01;38;5;167
+.lha 01;38;5;167
+.lrz 01;38;5;167
+.lz 01;38;5;167
+.lz4 01;38;5;167
+.lzh 01;38;5;167
+.lzma 01;38;5;167
+.lzo 01;38;5;167
+.rar 01;38;5;167
+.rpm 01;38;5;167
+.rz 01;38;5;167
+.sar 01;38;5;167
+.t7z 01;38;5;167
+.tar 01;38;5;167
+.taz 01;38;5;167
+.tbz 01;38;5;167
+.tbz2 01;38;5;167
+.tgz 01;38;5;167
+.tlz 01;38;5;167
+.txz 01;38;5;167
+.tz 01;38;5;167
+.tzo 01;38;5;167
+.tzst 01;38;5;167
+.war 01;38;5;167
+.xz 01;38;5;167
+.z 01;38;5;167
+.Z 01;38;5;167
+.zip 01;38;5;167
+.zoo 01;38;5;167
+.zst 01;38;5;167
+
+#+--- Audio ---+
+.aac 38;5;108
+.au 38;5;108
+.flac 38;5;108
+.m4a 38;5;108
+.mid 38;5;108
+.midi 38;5;108
+.mka 38;5;108
+.mp3 38;5;108
+.mpa 38;5;108
+.mpeg 38;5;108
+.mpg 38;5;108
+.ogg 38;5;108
+.opus 38;5;108
+.ra 38;5;108
+.wav 38;5;108
+
+#+--- Customs ---+
+.3des 01;38;5;175
+.aes 01;38;5;175
+.gpg 01;38;5;175
+.pgp 01;38;5;175
+
+#+--- Documents ---+
+.doc 38;5;214
+.docx 38;5;214
+.dot 38;5;214
+.odg 38;5;214
+.odp 38;5;214
+.ods 38;5;214
+.odt 38;5;214
+.otg 38;5;214
+.otp 38;5;214
+.ots 38;5;214
+.ott 38;5;214
+.pdf 38;5;167
+.ppt 38;5;214
+.pptx 38;5;214
+.xls 38;5;142
+.xlsx 38;5;142
+
+#+--- Executables ---+
+.app 01;38;5;142
+.bat 01;38;5;142
+.btm 01;38;5;142
+.cmd 01;38;5;142
+.com 01;38;5;142
+.exe 01;38;5;142
+.reg 01;38;5;142
+
+#+--- Ignores ---+
+*~ 02;37
+.bak 02;37
+.BAK 02;37
+.log 02;37
+.old 02;37
+.OLD 02;37
+.orig 02;37
+.ORIG 02;37
+.swo 02;37
+.swp 02;37
+
+#+--- Images ---+
+.bmp 38;5;175
+.cgm 38;5;175
+.dl 38;5;175
+.dvi 38;5;175
+.emf 38;5;175
+.eps 38;5;175
+.gif 38;5;175
+.jpeg 38;5;175
+.jpg 38;5;175
+.JPG 38;5;175
+.mng 38;5;175
+.pbm 38;5;175
+.pcx 38;5;175
+.pgm 38;5;175
+.png 38;5;175
+.PNG 38;5;175
+.ppm 38;5;175
+.pps 38;5;175
+.ppsx 38;5;175
+.ps 38;5;175
+.svg 38;5;175
+.svgz 38;5;175
+.tga 38;5;175
+.tif 38;5;175
+.tiff 38;5;175
+.xbm 38;5;175
+.xcf 38;5;175
+.xpm 38;5;175
+.xwd 38;5;175
+.yuv 38;5;175
+
+#+--- Video ---+
+.anx 38;5;175
+.asf 38;5;175
+.avi 38;5;175
+.axv 38;5;175
+.flc 38;5;175
+.fli 38;5;175
+.flv 38;5;175
+.gl 38;5;175
+.m2v 38;5;175
+.m4v 38;5;175
+.mkv 38;5;175
+.mov 38;5;175
+.MOV 38;5;175
+.mp4 38;5;175
+.mpeg 38;5;175
+.mpg 38;5;175
+.nuv 38;5;175
+.ogm 38;5;175
+.ogv 38;5;175
+.ogx 38;5;175
+.qt 38;5;175
+.rm 38;5;175
+.rmvb 38;5;175
+.swf 38;5;175
+.vob 38;5;175
+.webm 38;5;175
+.wmv 38;5;175

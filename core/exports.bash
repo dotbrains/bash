@@ -111,33 +111,53 @@ fi
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-# Catppuccin for fzf (Macchiato)
-# see: https://github.com/catppuccin/fzf
-# export FZF_DEFAULT_OPTS=" \
-# --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796 \
-# --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6 \
-# --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796"
+# Theme Configuration
+# Available themes: nord, gruvbox
+# Set BASH_THEME environment variable to change (default: gruvbox)
+BASH_THEME="${BASH_THEME:-gruvbox}"
 
-# Catppuccin for Bat (Macchiato)
-# see: https://github.com/catppuccin/bat
-# export BAT_THEME="Catppuccin-macchiato"
+case "$BASH_THEME" in
+    gruvbox)
+        # Gruvbox Dark Medium for fzf
+        # see: https://github.com/morhetz/gruvbox
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#d5c4a1,bg:#282828,hl:#fabd2f
+            --color=fg+:#ebdbb2,bg+:#3c3836,hl+:#fabd2f
+            --color=info:#83a598,prompt:#fb4934,pointer:#b8bb26
+            --color=marker:#8ec07c,spinner:#d3869b,header:#8ec07c'
+        
+        # Gruvbox for Bat
+        export BAT_THEME="gruvbox-dark"
+        
+        # Set Gruvbox dir_colors
+        THEME_DIR_COLORS="dir_colors_gruvbox"
+        ;;
+    
+    nord)
+        # Nord for fzf
+        # see: https://github.com/ianchesal/nord-fzf
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
+            --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
+            --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
+            --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
+        
+        # Nord for Bat
+        export BAT_THEME="Nord"
+        
+        # Set Nord dir_colors
+        THEME_DIR_COLORS="dir_colors_nord"
+        ;;
+    
+    *)
+        echo "Warning: Theme '$BASH_THEME' not found. Available themes: nord, gruvbox"
+        echo "Defaulting to gruvbox..."
+        BASH_THEME="gruvbox"
+        THEME_DIR_COLORS="dir_colors_gruvbox"
+        ;;
+esac
 
-# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-# Nord for fzf
-# see: https://github.com/ianchesal/nord-fzf
-export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
-    --color=fg:#e5e9f0,bg:#3b4252,hl:#81a1c1
-    --color=fg+:#e5e9f0,bg+:#3b4252,hl+:#81a1c1
-    --color=info:#eacb8a,prompt:#bf6069,pointer:#b48dac
-    --color=marker:#a3be8b,spinner:#b48dac,header:#a3be8b'
-
-# Nord for Bat
-export BAT_THEME="Nord"
-
-# Set custom 'ls' colors
-# see: https://github.com/nordtheme/dircolors
-
+# Apply dir_colors
 # Check if running on macOS or Linux
 if [[ "$OSTYPE" == "darwin"* ]]; then
 	DIRCOLORS_CMD="gdircolors"
@@ -145,7 +165,7 @@ else
 	DIRCOLORS_CMD="dircolors"
 fi
 
-test -r "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/dir_colors" && eval "$($DIRCOLORS_CMD "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/dir_colors")"
+test -r "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/$THEME_DIR_COLORS" && eval "$($DIRCOLORS_CMD "${XDG_CONFIG_HOME:-$HOME/.config}/bash/themes/$THEME_DIR_COLORS")"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
