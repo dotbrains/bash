@@ -224,14 +224,6 @@ rm -rf ~/.local/share/bash
 rm -rf ~/.cache/bash
 ```
 
-## Migration from Old Configuration
-
-If you're migrating from the old flat structure:
-
-1. Your history will automatically migrate to the XDG location
-2. Old `bash/bash_*` files are preserved in the `bash/` directory as backup
-3. The old `bash_profile` is renamed to `bash_profile.old`
-
 ## Next Steps
 
 - Read [FUNCTIONS.md](FUNCTIONS.md) for available shell functions
