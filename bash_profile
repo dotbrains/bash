@@ -77,8 +77,7 @@ source_bash_files "${BASH_CONFIG_DIR}/integrations" \
     "z-lua.bash" \
     "thefuck.bash" \
     "emoji-log.bash" \
-    "theme.bash" \
-    "starship.bash"
+    "theme.bash"
 
 # Cleanup
 unset -f source_bash_files
@@ -91,12 +90,32 @@ unset -f source_bash_files
 processor=$(/usr/sbin/sysctl -n machdep.cpu.brand_string 2>/dev/null | grep -o "Apple")
 
 if [[ -n $processor ]]; then
-    # Apple Silicon - 'brew' configurations
-    [[ -x "/opt/homebrew/bin/brew" ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+    # Apple Silicon - Set Homebrew paths manually to avoid shell detection issues
+    if [[ -x "/opt/homebrew/bin/brew" ]]; then
+        export HOMEBREW_PREFIX="/opt/homebrew"
+        export HOMEBREW_CELLAR="/opt/homebrew/Cellar"
+        export HOMEBREW_REPOSITORY="/opt/homebrew"
+        export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+        export MANPATH="/opt/homebrew/share/man${MANPATH+:$MANPATH}:"
+        export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}"
+    fi
 else
-    # Intel - 'brew' configurations
-    [[ -x "/usr/local/bin/brew" ]] && eval "$(/usr/local/bin/brew shellenv)"
+    # Intel - Set Homebrew paths manually to avoid shell detection issues
+    if [[ -x "/usr/local/bin/brew" ]]; then
+        export HOMEBREW_PREFIX="/usr/local"
+        export HOMEBREW_CELLAR="/usr/local/Cellar"
+        export HOMEBREW_REPOSITORY="/usr/local/Homebrew"
+        export PATH="/usr/local/bin:/usr/local/sbin:$PATH"
+        export MANPATH="/usr/local/share/man${MANPATH+:$MANPATH}:"
+        export INFOPATH="/usr/local/share/info:${INFOPATH:-}"
+    fi
 fi
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Starship Prompt (must be loaded after Homebrew)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[[ -r "${BASH_CONFIG_DIR}/integrations/starship.bash" ]] && . "${BASH_CONFIG_DIR}/integrations/starship.bash"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Optional: Start tmux on bash startup
