@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# Load nord theme
+# Load terminal theme using theme.sh
 # see: https://github.com/lemnos/theme.sh
 
 if command -v theme &>/dev/null; then
-    theme nord
+    theme gruvbox-material-dark-medium
 fi
