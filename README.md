@@ -13,7 +13,7 @@ A modular, XDG Base Directory compliant Bash configuration framework with organi
 
 ## Structure
 
-```
+```text
 .
 ├── bash_profile          # Main entry point
 ├── core/                 # Core Bash configuration
