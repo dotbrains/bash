@@ -95,6 +95,7 @@ Complete listing of all aliases provided by this configuration.
 - `yu` - Update yarn and all packages
 
 ### Homebrew
+
 - `brewd` - Run brew doctor
 - `brewi` - Install package (`brew install`)
 - `brewr` - Uninstall package (`brew uninstall`)
@@ -102,6 +103,7 @@ Complete listing of all aliases provided by this configuration.
 - `brewu()` - Function: Update and upgrade brew (+ cask + mas on macOS)
 
 ### pip (Python 2)
+
 - `pipi` - Install package (`pip install`)
 - `pipr` - Uninstall package (`pip uninstall`)
 - `pipls` - List installed packages
@@ -109,6 +111,7 @@ Complete listing of all aliases provided by this configuration.
 - `pipu` - Update pip, setuptools, and all packages
 
 ### pip3 (Python 3)
+
 - `pip3i` - Install package (`pip3 install`)
 - `pip3r` - Uninstall package (`pip3 uninstall`)
 - `pip3ls` - List installed packages
@@ -116,6 +119,7 @@ Complete listing of all aliases provided by this configuration.
 - `pip3u` - Update pip3 and all packages
 
 ### Composer (PHP)
+
 - `ci` - Install dependencies (`composer install`)
 - `cr` - Remove package (`composer remove`)
 - `cls` - List commands (`composer list`)
@@ -125,6 +129,7 @@ Complete listing of all aliases provided by this configuration.
 ## Piknik (Network Clipboard)
 
 If piknik is installed:
+
 - `pkc` - Copy from STDIN to clipboard
 - `pkp` - Paste clipboard content
 - `pkm` - Move clipboard content
@@ -139,6 +144,7 @@ If piknik is installed:
 ## Integration-Specific
 
 ### thefuck
+
 If thefuck is installed, it adds command correction with `fuck` command.
 
 ### Emoji-log (Git Commits)
