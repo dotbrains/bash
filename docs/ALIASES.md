@@ -148,7 +148,9 @@ If piknik is installed:
 If thefuck is installed, it adds command correction with `fuck` command.
 
 ### Emoji-log (Git Commits)
+
 When loaded via integration:
+
 - `gnew <message>` - 📦 NEW commit
 - `gimp <message>` - 👌 IMPROVE commit
 - `gfix <message>` - 🐛 FIX commit
@@ -161,7 +163,9 @@ When loaded via integration:
 ## Notes
 
 ### Conditional Aliases
+
 Some aliases are only defined if their corresponding tools are installed:
+
 - `eza` (modern ls) - Replaces ls commands
 - `rip` or `trash` - Safer rm alternatives
 - `hub` - Enhanced git CLI
@@ -172,25 +176,31 @@ Some aliases are only defined if their corresponding tools are installed:
 - `thefuck` - Command correction
 
 ### Platform-Specific
+
 Some aliases behave differently on macOS vs Linux:
+
 - `afk` (lock screen)
 - `lip` (local IP - macOS only uses `ipconfig getifaddr en0`)
 - Desktop icon management
 
 ### Functions as Aliases
-Note that `brewu()` is technically a function (defined in the same file) rather than a true alias, but it's used like an alias.
+
+Note that `brewu()` is technically a function (defined in the same file)
+rather than a true alias, but it's used like an alias.
 
 ## Customization
 
 To add your own aliases:
 
 1. Create a new file in `aliases/` directory:
+
    ```bash
    # ~/.config/bash/aliases/custom.bash
    alias myalias="my command"
    ```
 
 2. Source it in `bash_profile`:
+
    ```bash
    source_bash_files "${BASH_CONFIG_DIR}/aliases" \
        # ... existing aliases ...\
