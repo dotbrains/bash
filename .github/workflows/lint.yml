@@ -58,5 +58,5 @@ jobs:
         uses: ludeeus/action-shellcheck@master
         with:
           scandir: '.'
-          severity: warning
+          severity: error
           ignore_paths: bash-sensible

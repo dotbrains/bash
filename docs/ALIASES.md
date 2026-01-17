@@ -12,6 +12,7 @@ Complete listing of all aliases provided by this configuration.
 ## System Operations
 
 ### Basic Commands
+
 - `:q` - Exit shell (Vim-style)
 - `q` - Exit shell
 - `c` - Clear screen
@@ -21,6 +22,7 @@ Complete listing of all aliases provided by this configuration.
 - `+x` - Make file executable (`chmod +x`)
 
 ### Clipboard (Linux with xclip)
+
 - `pbcopy` - Copy to clipboard (Linux equivalent of macOS pbcopy)
 - `pbpaste` - Paste from clipboard (Linux equivalent of macOS pbpaste)
 

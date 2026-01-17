@@ -4,7 +4,8 @@ This guide explains how to maintain the CHANGELOG.md file for this project.
 
 ## Format
 
-We follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format with the following sections:
+We follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
+format with the following sections:
 
 - **Added** - New features or functionality
 - **Changed** - Changes in existing functionality
@@ -29,9 +30,11 @@ We follow [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) format with t
    - Bug fix description
    ```
 
-2. **Be specific and user-focused** - Write what changed from the user's perspective, not implementation details.
+2. **Be specific and user-focused** - Write what changed from the
+   user's perspective, not implementation details.
 
-3. **Group related changes** - If multiple commits relate to one feature, summarize them as a single entry.
+3. **Group related changes** - If multiple commits relate to one feature,
+   summarize them as a single entry.
 
 ### Preparing for a Release
 
@@ -88,7 +91,10 @@ When you create a release tag (e.g., `v1.0.0`):
 
 ## Tips
 
-- **Commit early, update often** - Update the changelog as you make changes, not all at once before release
+- **Commit early, update often** - Update the changelog as you make
+  changes, not all at once before release
 - **Link to issues/PRs** when relevant - `Fixed shell integration (#123)`
-- **Use semantic versioning** - Breaking changes = major version, new features = minor version, bug fixes = patch version
-- **Keep it concise** - Users want to quickly understand what changed, not read a novel
+- **Use semantic versioning** - Breaking changes = major version, new
+  features = minor version, bug fixes = patch version
+- **Keep it concise** - Users want to quickly understand what changed,
+  not read a novel
