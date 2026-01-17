@@ -27,4 +27,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fuzzy file and history search with fzf
 - Command correction with thefuck
 - Emoji-based Git commits with Emoji-log
-
