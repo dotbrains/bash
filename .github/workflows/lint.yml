@@ -29,7 +29,7 @@ jobs:
       - name: Lint Markdown files
         uses: DavidAnson/markdownlint-cli2-action@v14
         with:
-          config: .markdownlintrc
+          config: .markdownlint.json
           globs: |
             **/*.md
             !node_modules/**
