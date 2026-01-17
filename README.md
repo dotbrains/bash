@@ -1,5 +1,7 @@
 # Bash Configuration
 
+[![Lint](https://github.com/dotbrains/bash/actions/workflows/lint.yml/badge.svg)](https://github.com/dotbrains/bash/actions/workflows/lint.yml)
+
 A modular, XDG Base Directory compliant Bash configuration framework with organized aliases, functions, and integrations.
 
 ## Features
