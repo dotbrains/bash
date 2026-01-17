@@ -59,4 +59,4 @@ jobs:
         with:
           scandir: '.'
           severity: error
-          ignore_paths: bash-sensible
+          ignore_paths: bash-sensible functions

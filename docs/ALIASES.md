@@ -29,33 +29,40 @@ Complete listing of all aliases provided by this configuration.
 ### Directory Listing
 
 **With eza (modern ls):**
+
 - `ls` - List files (via eza)
 - `l` - List files in long format (`eza -l`)
 
 **Standard:**
+
 - `lsd` - List only directories
 - `lsh` - List only hidden files
 
 ### File Operations
 
 **Safer rm (if installed):**
+
 - `rm` - Safe delete via `rip` or `trash` (if available)
 
 ### Search & Navigation
 
 **With fzy (fuzzy finder):**
+
 - `fzyf` - Fuzzy find files
 - `fzyd` - Fuzzy find directories
 
 **With zoxide:**
+
 - `z` - Smart directory jumping
 
 ### Desktop Management (macOS/Linux)
 
 **Lock Screen:**
+
 - `afk` - Lock screen (macOS: CGSession, Linux: gnome-screensaver or dm-tool)
 
 **Desktop Icons:**
+
 - `hide-desktop-icons` - Hide desktop icons
 - `show-desktop-icons` - Show desktop icons
 
@@ -74,6 +81,7 @@ Complete listing of all aliases provided by this configuration.
 ## Package Managers
 
 ### NPM (Node Package Manager)
+
 - `npmi` - Install package globally (`npm i -g`)
 - `npmr` - Uninstall package globally (`npm uninstall -g`)
 - `npmls` - List global packages (`npm list -g --depth 0`)
@@ -81,6 +89,7 @@ Complete listing of all aliases provided by this configuration.
 - `npmu` - Update npm to latest version
 
 ### Yarn
+
 - `ya` - Add package (`yarn add`)
 - `yr` - Remove package (`yarn remove`)
 - `yu` - Update yarn and all packages
