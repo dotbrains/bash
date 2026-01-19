@@ -1,4 +1,4 @@
-# Bash Configuration
+# bash
 
 [![Lint](https://github.com/dotbrains/bash/actions/workflows/lint.yml/badge.svg)](https://github.com/dotbrains/bash/actions/workflows/lint.yml)
 [![Release](https://github.com/dotbrains/bash/actions/workflows/release.yml/badge.svg)](https://github.com/dotbrains/bash/actions/workflows/release.yml)
