@@ -126,6 +126,12 @@ Complete listing of all aliases provided by this configuration.
 - `cs` - Search packages (`composer search`)
 - `cu` - Self-update composer
 
+## Claude Code
+
+If claude is installed:
+
+- `claude` - Launch Claude Code with Opus model and skip permissions (`claude --model opus --dangerously-skip-permissions`)
+
 ## Piknik (Network Clipboard)
 
 If piknik is installed:

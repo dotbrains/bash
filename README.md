@@ -31,7 +31,8 @@ A modular, XDG Base Directory compliant Bash configuration framework with organi
 │   ├── system.bash       # System operations
 │   ├── networking.bash   # Network utilities
 │   ├── git.bash          # Git shortcuts
-│   └── package-managers.bash # Package manager aliases
+│   ├── package-managers.bash # Package manager aliases
+│   └── claude.bash       # Claude Code aliases
 ├── functions/            # Shell functions by category
 │   ├── general.bash      # General utilities (editor, updates, history)
 │   ├── file-operations.bash # File management (compress, extract, datauri)
