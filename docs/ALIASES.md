@@ -137,6 +137,8 @@ If claude is installed:
 If codex is installed:
 
 - `codex` - Launch Codex CLI with gpt-5.4 model (`codex --model gpt-5.4`)
+- `cx` - Launch with full-auto, no prompts, sandboxed (`codex --model gpt-5.4 --full-auto`)
+- `cxd` - Launch with dangerously-bypass-approvals-and-sandbox (`codex --model gpt-5.4 --dangerously-bypass-approvals-and-sandbox`)
 
 ## Piknik (Network Clipboard)
 
