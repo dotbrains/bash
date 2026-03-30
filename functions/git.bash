@@ -753,7 +753,7 @@ gcfp() {
   fi
 
   git push
-  gh u $(_git_commit_last)
+  ghub u $(_git_commit_last)
 }
 
 # Label: Git Commit (all)

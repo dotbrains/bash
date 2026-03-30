@@ -5,11 +5,11 @@
 # Label: GitHub
 # Description: View GitHub details for current project.
 # Parameters: $1 (optional) - The option selection, $2 (optional) - The option input.
-gh() {
+ghub() {
   if [[ -d ".git" ]]; then
     while true; do
       if [[ $# == 0 ]]; then
-        printf "\n%s\n" "Usage: gh OPTION"
+        printf "\n%s\n" "Usage: ghub OPTION"
         printf "\n%s\n" "GitHub Options (default browser):"
         printf "%s\n" "  o: Open repository."
         printf "%s\n" "  i: Open repository issues."
@@ -55,7 +55,7 @@ ghpra() {
 
       if [[ -d ".git" ]]; then
         if [[ "$(_git_branch_name)" != "master" ]]; then
-          gh b r # a.k.a. GitHub Branch Pull Request
+          ghub b r # a.k.a. GitHub Branch Pull Request
         fi
       fi
     )
