@@ -136,7 +136,7 @@ If claude is installed:
 
 If codex is installed:
 
-- `codex` - Launch Codex CLI with o3 model (`codex --model o3`)
+- `codex` - Launch Codex CLI with gpt-5.4 model (`codex --model gpt-5.4`)
 
 ## Piknik (Network Clipboard)
 
