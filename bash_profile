@@ -58,7 +58,8 @@ source_bash_files "${BASH_CONFIG_DIR}/aliases" \
     "networking.bash" \
     "git.bash" \
     "package-managers.bash" \
-    "claude.bash"
+    "claude.bash" \
+    "codex.bash"
 
 # Source functions
 source_bash_files "${BASH_CONFIG_DIR}/functions" \

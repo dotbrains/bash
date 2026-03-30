@@ -132,6 +132,12 @@ If claude is installed:
 
 - `claude` - Launch Claude Code with Opus model and skip permissions (`claude --model opus --dangerously-skip-permissions`)
 
+## Codex CLI
+
+If codex is installed:
+
+- `codex` - Launch Codex CLI with o3 model (`codex --model o3`)
+
 ## Piknik (Network Clipboard)
 
 If piknik is installed:
