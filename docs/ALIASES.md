@@ -141,6 +141,12 @@ If codex is installed:
 - `cx` - Launch with full-auto, no prompts, sandboxed (`codex --model gpt-5.4 --full-auto`)
 - `cxd` - Launch with dangerously-bypass-approvals-and-sandbox (`codex --model gpt-5.4 --dangerously-bypass-approvals-and-sandbox`)
 
+## pi coding agent
+
+If pi is installed:
+
+- `pp` - Print mode, non-interactive query (`pi -p`)
+
 ## Piknik (Network Clipboard)
 
 If piknik is installed:
