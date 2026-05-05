@@ -121,6 +121,13 @@ fi
 [[ -r "${BASH_CONFIG_DIR}/integrations/starship.bash" ]] && . "${BASH_CONFIG_DIR}/integrations/starship.bash"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# zoxide (must be the very last initialization)
+# zoxide doctor warns when its init isn't the final line of the shell config.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[[ -r "${BASH_CONFIG_DIR}/integrations/zoxide.bash" ]] && . "${BASH_CONFIG_DIR}/integrations/zoxide.bash"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # Optional: Start tmux on bash startup
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
