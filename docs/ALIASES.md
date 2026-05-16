@@ -138,6 +138,7 @@ If codex is installed:
 
 - `cx` - Launch with full-auto, no prompts, sandboxed (`codex --full-auto`)
 - `cxd` - Launch with dangerously-bypass-approvals-and-sandbox (`codex --dangerously-bypass-approvals-and-sandbox`)
+- `cy` - Launch with yolo mode (`codex --yolo`)
 
 ## pi coding agent
 
