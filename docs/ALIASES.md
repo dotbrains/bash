@@ -130,8 +130,7 @@ Complete listing of all aliases provided by this configuration.
 
 If claude is installed:
 
-- `claude` - Launch Claude Code with Opus model, safe default (`claude --model opus`)
-- `cl` - Launch with skip-permissions, no prompts (`claude --model opus --dangerously-skip-permissions`)
+- `cl` - Launch with skip-permissions, no prompts (`claude --dangerously-skip-permissions`)
 
 ## Codex CLI
 
