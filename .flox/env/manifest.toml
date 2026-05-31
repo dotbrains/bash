@@ -1,0 +1,19 @@
+version = 1
+
+# Reproducible toolchain for developing the Bash configuration.
+#
+# Activate with `flox activate` from the bash/ directory to get bash,
+# shellcheck, and nodejs for local linting that matches CI.
+
+[install]
+bash.pkg-path = "bash"
+shellcheck.pkg-path = "shellcheck"
+nodejs.pkg-path = "nodejs_20"
+
+[options]
+systems = [
+  "aarch64-darwin",
+  "x86_64-darwin",
+  "aarch64-linux",
+  "x86_64-linux",
+]
