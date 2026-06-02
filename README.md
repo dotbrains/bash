@@ -2,7 +2,7 @@
 
 [![Lint](https://github.com/dotbrains/bash/actions/workflows/lint.yml/badge.svg)](https://github.com/dotbrains/bash/actions/workflows/lint.yml)
 [![Release](https://github.com/dotbrains/bash/actions/workflows/release.yml/badge.svg)](https://github.com/dotbrains/bash/actions/workflows/release.yml)
-[![License: PolyForm Shield 1.0.0](https://img.shields.io/badge/License-PolyForm%20Shield%201.0.0-blue.svg)](https://polyformproject.org/licenses/shield/1.0.0/)
+[![License: PolyForm Shield 1.0.0](https://img.shields.io/badge/License-PolyForm%20Shield%201.0.0-blue.svg)](https://polyformproject.org/licenses/shield/1.0.0)
 
 A modular, XDG Base Directory compliant Bash configuration framework with organized aliases, functions, and integrations.
 
@@ -128,7 +128,7 @@ Contributions are welcome! Please feel free to submit pull requests or open issu
 
 ## License
 
-Licensed under [PolyForm Shield 1.0.0](https://polyformproject.org/licenses/shield/1.0.0/).
+Licensed under [PolyForm Shield 1.0.0](https://polyformproject.org/licenses/shield/1.0.0).
 See [LICENSE](LICENSE) for details.
 ## Credits
 
