@@ -116,7 +116,8 @@ fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Theme Configuration
-# Available themes: gruvbox, nord, catppuccin
+# Available themes: gruvbox, nord, catppuccin, tokyo-night, rose-pine,
+# dracula, everforest, solarized, kanagawa
 # Set SMU_THEME or BASH_THEME to change (default: gruvbox)
 SMU_PROFILE="${XDG_CONFIG_HOME:-$HOME/.config}/set-me-up/profile.env"
 if [ -f "$SMU_PROFILE" ]; then
@@ -180,9 +181,69 @@ case "$BASH_THEME" in
         # Reuse the neutral dir_colors fallback until a Catppuccin file exists.
         THEME_DIR_COLORS="dir_colors"
         ;;
+
+    tokyo-night)
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#c0caf5,bg:#1a1b26,hl:#7aa2f7
+            --color=fg+:#c0caf5,bg+:#283457,hl+:#7aa2f7
+            --color=info:#bb9af7,prompt:#f7768e,pointer:#9ece6a
+            --color=marker:#7dcfff,spinner:#bb9af7,header:#7dcfff'
+        export BAT_THEME="TokyoNight"
+        THEME_DIR_COLORS="dir_colors"
+        ;;
+
+    rose-pine)
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#e0def4,bg:#191724,hl:#9ccfd8
+            --color=fg+:#e0def4,bg+:#393552,hl+:#9ccfd8
+            --color=info:#c4a7e7,prompt:#eb6f92,pointer:#31748f
+            --color=marker:#ebbcba,spinner:#c4a7e7,header:#ebbcba'
+        export BAT_THEME="Rose Pine"
+        THEME_DIR_COLORS="dir_colors"
+        ;;
+
+    dracula)
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#f8f8f2,bg:#282a36,hl:#bd93f9
+            --color=fg+:#f8f8f2,bg+:#44475a,hl+:#bd93f9
+            --color=info:#ff79c6,prompt:#ff5555,pointer:#50fa7b
+            --color=marker:#8be9fd,spinner:#ff79c6,header:#8be9fd'
+        export BAT_THEME="Dracula"
+        THEME_DIR_COLORS="dir_colors"
+        ;;
+
+    everforest)
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#d3c6aa,bg:#2d353b,hl:#7fbbb3
+            --color=fg+:#d3c6aa,bg+:#3a515d,hl+:#7fbbb3
+            --color=info:#d699b6,prompt:#e67e80,pointer:#a7c080
+            --color=marker:#83c092,spinner:#d699b6,header:#83c092'
+        export BAT_THEME="Everforest Dark"
+        THEME_DIR_COLORS="dir_colors"
+        ;;
+
+    solarized)
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#839496,bg:#002b36,hl:#268bd2
+            --color=fg+:#93a1a1,bg+:#073642,hl+:#268bd2
+            --color=info:#6c71c4,prompt:#dc322f,pointer:#859900
+            --color=marker:#2aa198,spinner:#6c71c4,header:#2aa198'
+        export BAT_THEME="Solarized (dark)"
+        THEME_DIR_COLORS="dir_colors"
+        ;;
+
+    kanagawa)
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=fg:#dcd7ba,bg:#1f1f28,hl:#7e9cd8
+            --color=fg+:#dcd7ba,bg+:#2d4f67,hl+:#7e9cd8
+            --color=info:#957fb8,prompt:#c34043,pointer:#76946a
+            --color=marker:#7aa89f,spinner:#957fb8,header:#7aa89f'
+        export BAT_THEME="Kanagawa"
+        THEME_DIR_COLORS="dir_colors"
+        ;;
     
     *)
-        echo "Warning: Theme '$BASH_THEME' not found. Available themes: gruvbox, nord, catppuccin"
+        echo "Warning: Theme '$BASH_THEME' not found."
         echo "Defaulting to gruvbox..."
         BASH_THEME="gruvbox"
         THEME_DIR_COLORS="dir_colors_gruvbox"

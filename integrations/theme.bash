@@ -16,5 +16,23 @@ if command -v theme &>/dev/null; then
         catppuccin)
             theme catppuccin-macchiato
             ;;
+        tokyo-night)
+            theme tokyo-night
+            ;;
+        rose-pine)
+            theme rose-pine
+            ;;
+        dracula)
+            theme dracula
+            ;;
+        everforest)
+            theme everforest
+            ;;
+        solarized)
+            theme solarized-dark
+            ;;
+        kanagawa)
+            theme kanagawa
+            ;;
     esac
 fi
