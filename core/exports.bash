@@ -46,11 +46,13 @@ export LC_ALL="en_US.UTF-8"
 
 # Use custom `less` colors for `man` pages.
 
-export LESS_TERMCAP_md="$(
+LESS_TERMCAP_md="$(
 	tput bold 2>/dev/null
 	tput setaf 2 2>/dev/null
 )"
-export LESS_TERMCAP_me="$(tput sgr0 2>/dev/null)"
+export LESS_TERMCAP_md
+LESS_TERMCAP_me="$(tput sgr0 2>/dev/null)"
+export LESS_TERMCAP_me
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -89,7 +91,9 @@ export PYTHONIOENCODING="UTF-8"
 
 if command -v gem &>/dev/null; then
 	if [ -d "$(gem environment gemdir)/bin" ]; then
-		export PATH="$(gem environment gemdir)/bin:$PATH"
+		gem_bindir="$(gem environment gemdir)/bin"
+		export PATH="$gem_bindir:$PATH"
+		unset gem_bindir
 	fi
 fi
 
@@ -112,9 +116,22 @@ fi
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 # Theme Configuration
-# Available themes: nord, gruvbox
-# Set BASH_THEME environment variable to change (default: gruvbox)
-BASH_THEME="${BASH_THEME:-gruvbox}"
+# Available themes: gruvbox, nord, catppuccin
+# Set SMU_THEME or BASH_THEME to change (default: gruvbox)
+SMU_PROFILE="${XDG_CONFIG_HOME:-$HOME/.config}/set-me-up/profile.env"
+if [ -f "$SMU_PROFILE" ]; then
+    smu_theme_before="${SMU_THEME:-}"
+    smu_prompt_before="${SMU_PROMPT:-}"
+    # shellcheck source=/dev/null
+    . "$SMU_PROFILE"
+    [ -n "$smu_theme_before" ] && SMU_THEME="$smu_theme_before"
+    [ -n "$smu_prompt_before" ] && SMU_PROMPT="$smu_prompt_before"
+    unset smu_theme_before smu_prompt_before
+fi
+
+export SMU_THEME="${SMU_THEME:-gruvbox}"
+export SMU_PROMPT="${SMU_PROMPT:-starship}"
+BASH_THEME="${BASH_THEME:-$SMU_THEME}"
 
 case "$BASH_THEME" in
     gruvbox)
@@ -148,9 +165,24 @@ case "$BASH_THEME" in
         # Set Nord dir_colors
         THEME_DIR_COLORS="dir_colors_nord"
         ;;
+
+    catppuccin)
+        # Catppuccin Macchiato for fzf
+        # see: https://github.com/catppuccin/fzf
+        export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS'
+            --color=bg+:#363a4f,bg:#24273a,spinner:#f4dbd6,hl:#ed8796
+            --color=fg:#cad3f5,header:#ed8796,info:#c6a0f6,pointer:#f4dbd6
+            --color=marker:#f4dbd6,fg+:#cad3f5,prompt:#c6a0f6,hl+:#ed8796'
+
+        # Catppuccin for Bat
+        export BAT_THEME="Catppuccin-macchiato"
+
+        # Reuse the neutral dir_colors fallback until a Catppuccin file exists.
+        THEME_DIR_COLORS="dir_colors"
+        ;;
     
     *)
-        echo "Warning: Theme '$BASH_THEME' not found. Available themes: nord, gruvbox"
+        echo "Warning: Theme '$BASH_THEME' not found. Available themes: gruvbox, nord, catppuccin"
         echo "Defaulting to gruvbox..."
         BASH_THEME="gruvbox"
         THEME_DIR_COLORS="dir_colors_gruvbox"

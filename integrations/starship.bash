@@ -3,6 +3,10 @@
 # Load starship prompt
 # see: https://starship.rs
 
-if command -v starship &>/dev/null; then
+SMU_PROMPT="${SMU_PROMPT:-starship}"
+
+if [ "$SMU_PROMPT" = "classic" ]; then
+    PS1='\u@\h:\w\$ '
+elif command -v starship &>/dev/null; then
     eval "$(starship init bash)"
 fi
