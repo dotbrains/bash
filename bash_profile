@@ -121,6 +121,12 @@ fi
 [[ -r "${BASH_CONFIG_DIR}/integrations/starship.bash" ]] && . "${BASH_CONFIG_DIR}/integrations/starship.bash"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# atuin (must be loaded after Homebrew, before zoxide)
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+[[ -r "${BASH_CONFIG_DIR}/integrations/atuin.bash" ]] && . "${BASH_CONFIG_DIR}/integrations/atuin.bash"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # zoxide (must be the very last initialization)
 # zoxide doctor warns when its init isn't the final line of the shell config.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
