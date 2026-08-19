@@ -8,7 +8,7 @@ SMU_THEME="${SMU_THEME:-gruvbox}"
 if command -v theme &>/dev/null; then
     case "$SMU_THEME" in
         gruvbox)
-            theme gruvbox-material-dark-medium
+            theme gruvbox-dark
             ;;
         nord)
             theme nord
