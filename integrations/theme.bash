@@ -13,9 +13,6 @@ if command -v theme &>/dev/null; then
         nord)
             theme nord
             ;;
-        catppuccin)
-            theme catppuccin-macchiato
-            ;;
         tokyo-night)
             theme tokyo-night
             ;;
@@ -31,8 +28,7 @@ if command -v theme &>/dev/null; then
         solarized)
             theme solarized-dark
             ;;
-        kanagawa)
-            theme kanagawa
-            ;;
+        # catppuccin and kanagawa have no theme.sh equivalent; skip terminal
+        # palette sync for those (fzf/bat/nvim still get themed elsewhere)
     esac
 fi
